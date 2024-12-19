@@ -4,6 +4,7 @@ header {
 
   .header-container {
     max-width: 1440px;
+    height: 100%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -13,18 +14,33 @@ header {
   .header-left {
     display: flex;
     padding-left: 20px;
+    @media screen and (max-width: 500px) {
+      padding-left: 0;
+    }
     img {
       height: 100px;
       width: 100px;
+      @media screen and (max-width: 500px) {
+        display: none;
+      }
     }
 
     .title {
       display: flex;
       align-items: center;
       padding-left: 20px;
+      padding-right: 20px;
       p {
         font-size: 40px;
         color: black;
+        font-family: "Quicksand", sans-serif;
+        @media screen and (max-width: 850px) {
+          font-size: 30px;
+        }
+        @media screen and (max-width: 360px) {
+          padding-left: 0;
+          font-size: 30px;
+        }
       }
     }
   }
@@ -56,13 +72,18 @@ header {
             color: white;
             transition: 0.2s;
           }
+          @media screen and (max-width: 1024px) {
+            font-size: 16px;
+          }
         }
       }
+    }
+    @media screen and (max-width: 920px) {
+      display: none;
     }
   }
 
   .header-right {
-    margin-right: 20px;
     .header-btn {
       height: 45px;
       padding: 0 15px 0 15px;
@@ -75,13 +96,55 @@ header {
       background-color: #054652;
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
       &:hover {
-        background-color: #0d606e;
+        background-color: #0d6d7e;
         transition: 0.2s;
+      }
+      @media screen and (max-width: 1230px) {
+        display: none;
+      }
+    }
+    .resp-menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      margin-left: 20px;
+      @media screen and (max-width: 360px) {
+        width: 120px;
+      }
+    }
+    .burger-menu {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 35px;
+      height: 25px;
+      margin: 0 15px;
+      cursor: pointer;
+      @media screen and (max-width: 920px) {
+        display: flex;
+      }
+      span {
+        display: block;
+        height: 5px;
+        width: 100%;
+        background-color: #000;
+        border-radius: 10px;
+      }
+    }
+    .id-menu {
+      display: none;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      @media screen and (max-width: 1230px) {
+        display: flex;
+      }
+      img {
+        display: block;
+        height: 50px;
+        width: 100%;
       }
     }
   }
-}
-
-.activ {
-  background-color: #ff9633;
 }
