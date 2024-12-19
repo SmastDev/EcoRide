@@ -1,6 +1,9 @@
 header {
   height: 100px;
   background: #00d18b;
+  @media screen and (max-width: 850px) {
+    height: 80px;
+  }
 
   .header-container {
     max-width: 1440px;
@@ -20,8 +23,9 @@ header {
     img {
       height: 100px;
       width: 100px;
-      @media screen and (max-width: 500px) {
-        display: none;
+      @media screen and (max-width: 850px) {
+        height: 80px;
+        width: 80px;
       }
     }
 
@@ -35,12 +39,11 @@ header {
         color: black;
         font-family: "Quicksand", sans-serif;
         @media screen and (max-width: 850px) {
-          font-size: 30px;
+          font-size: 25px;
         }
-        @media screen and (max-width: 360px) {
-          padding-left: 0;
-          font-size: 30px;
-        }
+      }
+      @media screen and (max-width: 500px) {
+        padding-left: 0;
       }
     }
   }
@@ -109,8 +112,9 @@ header {
       align-items: center;
       width: 150px;
       margin-left: 20px;
-      @media screen and (max-width: 360px) {
-        width: 120px;
+      @media screen and (max-width: 400px) {
+        width: 100px;
+        margin-left: 0;
       }
     }
     .burger-menu {
@@ -123,6 +127,9 @@ header {
       cursor: pointer;
       @media screen and (max-width: 920px) {
         display: flex;
+      }
+      @media screen and (max-width: 400px) {
+        display: none;
       }
       span {
         display: block;
@@ -145,6 +152,10 @@ header {
         height: 50px;
         width: 100%;
       }
+    }
+    @media screen and (max-width: 400px) {
+      width: 80px;
+      margin-right: 20px;
     }
   }
 }

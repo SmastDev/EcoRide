@@ -13,6 +13,11 @@ header {
   height: 100px;
   background: #00d18b;
 }
+@media screen and (max-width: 850px) {
+  header {
+    height: 80px;
+  }
+}
 header .header-container {
   max-width: 1440px;
   height: 100%;
@@ -42,9 +47,10 @@ header .header-left img {
   height: 100px;
   width: 100px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 850px) {
   header .header-left img {
-    display: none;
+    height: 80px;
+    width: 80px;
   }
 }
 header .header-left .title {
@@ -64,13 +70,12 @@ header .header-left .title p {
 }
 @media screen and (max-width: 850px) {
   header .header-left .title p {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
-@media screen and (max-width: 360px) {
-  header .header-left .title p {
+@media screen and (max-width: 500px) {
+  header .header-left .title {
     padding-left: 0;
-    font-size: 30px;
   }
 }
 header .header-nav {
@@ -163,9 +168,10 @@ header .header-right .resp-menu {
   width: 150px;
   margin-left: 20px;
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 400px) {
   header .header-right .resp-menu {
-    width: 120px;
+    width: 100px;
+    margin-left: 0;
   }
 }
 header .header-right .burger-menu {
@@ -187,6 +193,11 @@ header .header-right .burger-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+@media screen and (max-width: 400px) {
+  header .header-right .burger-menu {
+    display: none;
   }
 }
 header .header-right .burger-menu span {
@@ -213,4 +224,10 @@ header .header-right .id-menu img {
   display: block;
   height: 50px;
   width: 100%;
+}
+@media screen and (max-width: 400px) {
+  header .header-right {
+    width: 80px;
+    margin-right: 20px;
+  }
 }/*# sourceMappingURL=index.css.map */
